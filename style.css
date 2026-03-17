@@ -1,7 +1,9 @@
-    body{
+body{
   font-family: Arial, sans-serif;
   margin:0;
   color:#222;
+  background:#fafafa;
+  line-height:1.7;
 }
 
 /* header */
@@ -9,45 +11,85 @@
 header{
   display:flex;
   justify-content:space-between;
-  padding:30px 60px;
+  align-items:center;
+  padding:25px 60px;
+  background:#fff;
+  border-bottom:1px solid #eee;
 }
 
 nav a{
   margin-left:20px;
   text-decoration:none;
   color:#333;
+  font-size:14px;
 }
 
-/* hero */
+nav a:hover{
+  opacity:0.6;
+}
+
+/* hero（白に戻す）*/
 
 .hero{
   padding:120px 20px;
   text-align:center;
+  background:#fff;
+  color:#222;
 }
 
 .hero h2{
-  font-size:40px;
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:14px;
+  color:#666;
 }
 
 /* section */
 
 section{
-  padding:80px 20px;
   max-width:900px;
-  margin:auto;
+  margin:100px auto;
+  padding:0 20px 60px;
+  border-bottom:1px solid #eee;
+}
+
+section:last-child{
+  border-bottom:none;
 }
 
 h2{
   margin-bottom:30px;
+  font-size:26px;
 }
 
+p{
+  margin-bottom:10px;
+}
+
+/* about */
+
+.about p{
+  line-height:1.9;
+}
+
+/* role（担当） */
+
+.role{
+  font-size:12px;
+  color:#888;
+  margin:5px 0 20px;
+  letter-spacing:1px;
+}
 
 /* works */
 
 .work-list{
   display:flex;
   flex-direction:column;
-  gap:60px;
+  gap:80px;
 }
 
 .work{
@@ -55,22 +97,20 @@ h2{
 }
 
 .work img{
-  width:80%;
+  width:90%;
   max-width:900px;
   display:block;
   margin:0 auto;
+  transition:0.3s;
+}
+
+.work img:hover{
+  transform:scale(1.02);
 }
 
 .work p{
-  margin-top:10px;
+  margin-top:15px;
   font-size:16px;
-}
-
-.work p.role{
-  font-size:12px;
-  color:#888;
-  margin-top:5px;
-  letter-spacing:1px;
 }
 
 /* works2 */
@@ -81,15 +121,8 @@ h2{
   gap:20px;
 }
 
-.work img{
+.work-list2 img{
   width:100%;
-}
-
-.work p.role{
-  font-size:12px;
-  color:#888;
-  margin-top:5px;
-  letter-spacing:1px;
 }
 
 /* works3 */
@@ -118,49 +151,73 @@ h2{
   font-size:18px;
 }
 
-.role{
-  font-size:12px;
-  color:#888;
-  margin-top:5px;
-}
-
 /* before-after */
-.ba-title{
-  text-align:left;
-  font-size:16px;
-  margin-bottom:10px;
-}
 
 .before-after{
   text-align:center;
 }
 
+/* タイトル（色味修正） */
 .ba-title{
   text-align:left;
-  font-weight:normal;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
+/* レイアウト */
 .ba-item{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:40px;
-  margin-top:40px;
+  margin-top:30px;
 }
 
+/* 各ボックス */
 .ba-box{
+  width:220px;
+  text-align:center; /* ← これが重要（中央に戻す） */
+}
+
+/* 画像 */
+.ba-box{
+  width:260px; /* ← 少し大きく */
   text-align:center;
 }
 
 .ba-box img{
-  width:200px;
-  height:auto;
-  border-radius:8px;
+  width:100%;
+  border-radius:10px; /* ← 角丸 */
 }
 
+/* Before / Afterラベル */
+.label{
+  font-size:14px;
+  color:#888;
+  margin-bottom:5px;
+  text-align:center; /* 念のため中央 */
+}
+
+/* 矢印 */
 .arrow{
-  font-size:40px;
-  color:#666;
+  font-size:28px;
+  color:#aaa;
+}
+
+/* 説明文 */
+.ba-desc{
+  margin:20px auto 0;
+  font-size:14px;
+  color:#555;
+  text-align:center;
+  line-height:1.8;
+  max-width:600px;
+}
+
+/* contact */
+
+.contact p{
+  font-size:14px;
 }
 
 /* footer */
@@ -168,5 +225,6 @@ h2{
 footer{
   text-align:center;
   padding:40px;
-  font-size:14px;
+  font-size:13px;
+  color:#777;
 }
